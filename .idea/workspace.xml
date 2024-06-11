@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc7b66f4-9e16-4847-93fb-055b63c0bb3c" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/projetoFinal/src/components/button/Button.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projetoFinal/src/components/button/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projetoFinal/src/components/navBar/NavBar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projetoFinal/src/components/navBar/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetoFinal/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/projetoFinal/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetoFinal/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/projetoFinal/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetoFinal/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/projetoFinal/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetoFinal/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projetoFinal/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,11 +83,17 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "ts.external.directory.path": "/home/gustavo/aula/projetoIOT/umidade-solo/node_modules/typescript/lib",
+    "prettierjs.PrettierConfiguration.Package": "/home/gustavo/aula/projetoIOT/projetoFinal/node_modules/prettier",
+    "settings.editor.selected.configurable": "copyright.filetypes.Vue.js",
+    "ts.external.directory.path": "/home/gustavo/aula/projetoIOT/projetoFinal/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/projetoFinal/src/components/navBar" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -97,6 +111,7 @@
       <updated>1718060771612</updated>
       <workItem from="1718060773074" duration="395000" />
       <workItem from="1718061178692" duration="1347000" />
+      <workItem from="1718063920868" duration="1931000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
