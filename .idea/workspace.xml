@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc7b66f4-9e16-4847-93fb-055b63c0bb3c" name="Changes" comment="button and navbar">
+    <list default="true" id="bc7b66f4-9e16-4847-93fb-055b63c0bb3c" name="Changes" comment="first commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,6 +13,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -71,13 +76,15 @@
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/home/gustavo/aula/projetoIOT",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/home/gustavo/aula/projetoIOT/projetoFinal/node_modules/prettier",
     "settings.editor.selected.configurable": "copyright.filetypes.Vue.js",
-    "ts.external.directory.path": "/home/gustavo/aula/projetoIOT/projetoFinal/node_modules/typescript/lib",
+    "ts.external.directory.path": "/home/gustavo/WebstormProjects/projetoIOT/projetoFinal/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -103,7 +110,9 @@
       <updated>1718060771612</updated>
       <workItem from="1718060773074" duration="395000" />
       <workItem from="1718061178692" duration="1347000" />
-      <workItem from="1718063920868" duration="3906000" />
+      <workItem from="1718063920868" duration="1931000" />
+      <workItem from="1718071145144" duration="430000" />
+      <workItem from="1718071592498" duration="553000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -113,15 +122,7 @@
       <option name="project" value="LOCAL" />
       <updated>1718061893964</updated>
     </task>
-    <task id="LOCAL-00002" summary="button and navbar">
-      <option name="closed" value="true" />
-      <created>1718066183319</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1718066183319</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +130,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <MESSAGE value="button and navbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="button and navbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
 </project>
