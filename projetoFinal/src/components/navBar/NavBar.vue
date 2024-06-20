@@ -1,35 +1,21 @@
-<script setup lang="ts">
-import type { NavBarProps } from '@/components/navBar/types'
-import { BNavbar, BNavbarNav, BNavItem, BNavItemDropdown, BDropdownItem, BNavForm, BFormInput, BButton } from 'bootstrap-vue';
-const props = defineProps<NavBarProps>() 
-</script>
-
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <BNavbar toggleable="lg" variant="primary" v-b-color-mode="'dark'">
-    <h1>{{ props.title }}</h1>
-      <BNavbarNav>
-        <BNavItem href="#">Link</BNavItem>
-      </BNavbarNav>
-      <!-- Right aligned nav items -->
-      <BNavbarNav class="ms-auto mb-2 mb-lg-0">
-        <BNavItemDropdown text="Lang" right>
-          <BDropdownItem href="#">EN</BDropdownItem>
-          <BDropdownItem href="#">ES</BDropdownItem>
-          <BDropdownItem href="#">RU</BDropdownItem>
-          <BDropdownItem href="#">FA</BDropdownItem>
-        </BNavItemDropdown>
-        <BNavItemDropdown right>
-          <!-- Using 'button-content' slot -->
-          <template #button-content>
-            <em>User</em>
-          </template>
-          <BDropdownItem href="#">Profile</BDropdownItem>
-          <BDropdownItem href="#">Sign Out</BDropdownItem>
-        </BNavItemDropdown>
-      </BNavbarNav>
-      <BNavForm class="d-flex">
-        <BFormInput class="me-2" placeholder="Search" />
-        <BButton type="submit" variant="outline-success">Search</BButton>
-      </BNavForm>
-  </BNavbar>
+  <nav class="navbar navbar-expand-lg bg-success" data-bs-theme="dark">
+  <div class="container-fluid">
+    <span class="navbar-brand">Sensor de Solo</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dashboard">Dashboard</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 </template>
