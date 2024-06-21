@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const umidade = ref(4)
-
+const umidade = ref(1)
 const imagem = ref('')
+
 switch (umidade.value) {
   case 1:
     imagem.value = '/src/assets/img/solo1.png'
@@ -21,11 +21,13 @@ switch (umidade.value) {
 </script>
 
 <template>
-  <div class="card text-center" style="width: 18rem">
-    <div class="card-body">
-      <h5 class="card-title">Umidade Atual</h5>
-      <span>{{ umidade }}</span>
-      <img :src="imagem" alt="" />
+  <div class="container">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title text-success">Umidade Atual</h5>
+        <p class="text-warning">{{ umidade }}</p>
+        <img :src="imagem" alt="" style="height: 12.5rem" />
+      </div>
     </div>
   </div>
 </template>

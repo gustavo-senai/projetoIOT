@@ -15,9 +15,9 @@ const series = [
 ]
 </script>
 <template>
-  <div class="card text-center">
-    <div class="card-body">
-      <apexchart width="50%" type="line" :options="options" :series="series"></apexchart>
+  <div class="container-fluid">
+    <div class="card text-center">
+        <apexchart type="line" :options="options" :series="series"></apexchart>
     </div>
   </div>
 </template>

@@ -1,9 +1,12 @@
 <script setup lang="ts">
-import Navbar from '@/components/navBar/NavBar.vue'
+import Navbar from '@/components/NavBar.vue'
+import Footer from '@/components/Footer.vue'
+
 </script>
 <template>
-<Navbar title="Inicio"/>
+  <Navbar />
   <div>
     <RouterView />
   </div>
+  <Footer />
 </template>
