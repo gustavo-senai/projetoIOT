@@ -20,18 +20,11 @@
             <a class="nav-link active" aria-current="page" href="/">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="dashboard">Dashboard</a>
-          </li>
-          <li>
-            <i class="material-icons" style="cursor: pointer; color: #FFF" @click="emit('openModal')">settings</i>
+            <a class="nav-link active" href="dashboard">Dashboard</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 </template>
-<script setup lang="ts">
 
-const emit = defineEmits(['openModal'])
-
-</script>

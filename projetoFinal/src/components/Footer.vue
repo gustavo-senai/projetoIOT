@@ -9,10 +9,10 @@
             <a class="nav-link active" aria-current="page" href="/">Gustavo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="dashboard">Marcos</a>
+            <a class="nav-link active" href="dashboard">Marcos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="dashboard">Vinicius</a>
+            <a class="nav-link active" href="dashboard">Vinycius</a>
           </li>
         </ul>
       </div>
