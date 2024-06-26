@@ -17,7 +17,7 @@ const series = [
 <template>
   <div class="container-fluid">
     <div class="card text-center">
-        <apexchart type="line" :options="options" :series="series"></apexchart>
+        <apexchart type="bar" :options="options" :series="series"></apexchart>
     </div>
   </div>
 </template>

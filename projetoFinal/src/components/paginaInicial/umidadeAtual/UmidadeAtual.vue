@@ -26,7 +26,7 @@ switch (umidade.value) {
       <div class="card-body">
         <h5 class="card-title text-success">Umidade Atual</h5>
         <p class="text-warning">{{ umidade }}</p>
-        <img :src="imagem" alt="" style="height: 12.5rem; width: 80%;" />
+        <img :src="imagem" alt="" style="height: 12.5rem;" />
       </div>
     </div>
   </div>
