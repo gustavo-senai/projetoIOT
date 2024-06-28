@@ -1,9 +1,19 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import http from '@/http';
+import { onMounted, ref } from 'vue'
 
-const umidade = ref(1)
+const umidade = ref()
 const imagem = ref('')
 
+onMounted(async () => {
+  try {
+    const response = await http.get('&pin=V0')
+    umidade.value = response.data
+
+  } catch (error) {
+    console.error('Error fetching value:', error)
+  }
+})
 switch (umidade.value) {
   case 1:
     imagem.value = '/src/assets/img/solo1.png'

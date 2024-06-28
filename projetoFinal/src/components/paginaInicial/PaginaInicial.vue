@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import CardAtivar from '@/components/paginaInicial/CardAtivar.vue'
 import GraficoInicial from '../GraficoInicial.vue'
-import UmidadeAtual from './umidadeAtual/UmidadeAtual.vue'
+import UmidadeAtual from '../UmidadeAtual.vue'
 </script>
 <template>
   <div class="container-fluid text-center">

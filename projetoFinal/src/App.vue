@@ -10,11 +10,3 @@ import Footer from '@/components/Footer.vue'
   </div>
   <Footer />
 </template>
-<style>
-body {
-    background-image: url('assets/img/background.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-}
-</style>
