@@ -5,7 +5,7 @@ import { onMounted, ref } from 'vue'
 const umidade = ref()
 const imagem = ref('')
 
-onMounted(async () => {
+const fetchUmidade = async () => {
   try {
     const response = await http.get('&pin=V0')
     umidade.value = response.data
@@ -21,6 +21,10 @@ onMounted(async () => {
   } else {
     imagem.value = '/src/assets/img/solo4.png'
   }
+}
+onMounted(async () => {
+  fetchUmidade()
+  setInterval(fetchUmidade, 30000)
 })
 </script>
 

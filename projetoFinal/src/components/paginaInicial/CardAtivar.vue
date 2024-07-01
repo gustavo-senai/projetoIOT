@@ -32,7 +32,6 @@ async function buttonClick() {
       )
       estadoAtual.value = 'Ligado'
       buttonText.value = 'Desligar'
-      console.log('Updated value sent:', bomba.value)
     } catch (error) {
       console.error('Error updating value:', error)
     }
@@ -45,7 +44,6 @@ async function buttonClick() {
       )
       estadoAtual.value = 'Desligado'
       buttonText.value = 'Ativar'
-      console.log('Updated value sent:', bomba.value)
     } catch (error) {
       console.error('Error updating value:', error)
     }
@@ -57,8 +55,8 @@ async function buttonClick() {
   <div class="container-fluid">
     <div class="card text-center text-bg-info mb-3" style="width: 18rem; margin: auto">
       <div class="card-body">
-        <h5 class="card-title text-light">Ativar bomba</h5>
-        <p class="card-title text-light">{{ estadoAtual }}</p>
+        <h6 class="card-title text-light">Ativar bomba</h6>
+        <p class="card-title text-light">Estado atual: {{ estadoAtual }}</p>
         <button type="button" class="btn btn-light text-info" @click="buttonClick()">
           {{ buttonText }}
         </button>

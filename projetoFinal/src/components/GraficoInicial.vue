@@ -8,7 +8,6 @@ onMounted(async () => {
   try {
     const response = await http.get('&pin=V0')
     umidade.value = response.data
-    console.log(umidade.value)
   } catch (error) {
     console.error('Error fetching value:', error)
   }
@@ -23,7 +22,7 @@ const options = ref({
 })
 const series = computed(() => [
   {
-    data: [100, 100, 90, 90, 100, umidade.value]
+    data: [92, 88, 84, 90, 100, umidade.value]
   }
 ])
 </script>

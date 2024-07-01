@@ -6,13 +6,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Gustavo</a>
+            <a class="nav-link active" aria-current="page" href="https://allmylinks.com/gustavoeliasdesouza" target="_blank">Gustavo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="dashboard">Marcos</a>
+            <a class="nav-link active" aria-current="page" href="https://allmylinks.com/marcos-souza-juni2" target="_blank">Marcos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="dashboard">Vinycius</a>
+            <a class="nav-link active" aria-current="page" href="https://www.example.com/gustavo" target="_blank">Vinycius</a>
           </li>
         </ul>
       </div>
