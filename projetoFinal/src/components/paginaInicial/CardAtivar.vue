@@ -1,42 +1,55 @@
 <script setup lang="ts">
-import { onMounted, ref, watch } from 'vue'
-import type Bomba from '@/interfaces/Bomba'
-import http from '@/http/index';
+import { onMounted, ref } from 'vue'
+import http from '@/http/index'
+import axios from 'axios'
 
-// Define a reactive reference for bomba
-const bomba = ref<Bomba>()
+const bomba = ref<number>()
+const estadoAtual = ref('')
+const buttonText = ref('')
 
-// Fetch the current value when the component is mounted
 onMounted(async () => {
   try {
     const response = await http.get('&pin=V1')
     bomba.value = response.data
-
-    console.log('Current value:', bomba.value)
+    if (bomba.value == 1) {
+      estadoAtual.value = 'Ligado'
+      buttonText.value = 'Desligar'
+    } else {
+      estadoAtual.value = 'Desligado'
+      buttonText.value = 'Ativar'
+    }
   } catch (error) {
     console.error('Error fetching value:', error)
   }
 })
+async function buttonClick() {
+  if (bomba.value == 1) {
+    try {
+      bomba.value = 0
 
-function buttonClick() {
-  watch(
-    () => bomba.value?.value,
-    async (newValue) => {
-      if (newValue === 1 && bomba.value) {
-        try {
-          // Update the value from 1 to 0
-          bomba.value.value = 0
-
-          // Send the updated value back to the ESP
-          await requestBomba.post('update?pin=V1', { value: bomba.value.value })
-
-          console.log('Updated value sent:', bomba.value.value)
-        } catch (error) {
-          console.error('Error updating value:', error)
-        }
-      }
+      await axios.get(
+        'https://ny3.blynk.cloud/external/api/update?token=2Mqfk3a3xe8JprDv8OaFTjiaB-IpYrxm&V1=0'
+      )
+      estadoAtual.value = 'Ligado'
+      buttonText.value = 'Desligar'
+      console.log('Updated value sent:', bomba.value)
+    } catch (error) {
+      console.error('Error updating value:', error)
     }
-  )
+  } else {
+    try {
+      bomba.value = 1
+
+      await axios.get(
+        'https://ny3.blynk.cloud/external/api/update?token=2Mqfk3a3xe8JprDv8OaFTjiaB-IpYrxm&V1=1'
+      )
+      estadoAtual.value = 'Desligado'
+      buttonText.value = 'Ativar'
+      console.log('Updated value sent:', bomba.value)
+    } catch (error) {
+      console.error('Error updating value:', error)
+    }
+  }
 }
 </script>
 
@@ -45,7 +58,10 @@ function buttonClick() {
     <div class="card text-center text-bg-info mb-3" style="width: 18rem; margin: auto">
       <div class="card-body">
         <h5 class="card-title text-light">Ativar bomba</h5>
-        <button type="button" class="btn btn-light text-info" @click="buttonClick()">Ativar</button>
+        <p class="card-title text-light">{{ estadoAtual }}</p>
+        <button type="button" class="btn btn-light text-info" @click="buttonClick()">
+          {{ buttonText }}
+        </button>
       </div>
     </div>
   </div>
