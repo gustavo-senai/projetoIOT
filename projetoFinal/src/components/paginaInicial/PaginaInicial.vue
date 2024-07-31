@@ -16,3 +16,11 @@ import UmidadeAtual from '../UmidadeAtual.vue'
     </div>
   </div>
 </template>
+<style scoped lang="scss">
+* {
+  background-color: #C4D3BE;
+  margin: auto;
+  padding: 0;
+
+}
+</style>

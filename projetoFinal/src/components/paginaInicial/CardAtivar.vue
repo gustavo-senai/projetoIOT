@@ -53,14 +53,19 @@ async function buttonClick() {
 
 <template>
   <div class="container-fluid">
-    <div class="card text-center text-bg-info mb-3" style="width: 18rem; margin: auto">
+    <div class="card text-center card-ativar mb-3" style="width: 18rem; margin: auto">
       <div class="card-body">
         <h6 class="card-title text-light">Ativar bomba</h6>
         <p class="card-title text-light">Estado atual: {{ estadoAtual }}</p>
-        <button type="button" class="btn btn-light text-info" @click="buttonClick()">
+        <button type="button" class="btn btn-light " @click="buttonClick()">
           {{ buttonText }}
         </button>
       </div>
     </div>
   </div>
 </template>
+<style scoped lang="scss">
+.card-ativar {
+  background-color: #0A615B;
+}
+</style>

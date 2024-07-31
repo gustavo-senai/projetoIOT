@@ -23,19 +23,27 @@ const fetchUmidade = async () => {
   }
 }
 onMounted(async () => {
-  fetchUmidade()
+  await fetchUmidade()
   setInterval(fetchUmidade, 30000)
 })
 </script>
 
 <template>
   <div class="container">
-    <div class="card text-center">
+    <div class="card text-center card-umidade">
       <div class="card-body">
-        <h5 class="card-title text-success">Umidade Atual</h5>
+        <h5 class="card-title">Umidade Atual</h5>
         <p class="text-warning">{{ umidade }}%</p>
         <img :src="imagem" alt="" style="height: 12.5rem" />
       </div>
     </div>
   </div>
 </template>
+<style scoped lang="scss">
+.card-umidade {
+  background-color: #77854A;
+}
+.card-title {
+  color: #000
+}
+</style>

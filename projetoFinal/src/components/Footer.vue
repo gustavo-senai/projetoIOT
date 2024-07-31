@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <nav class="navbar navbar-expand-lg fixed-bottom bg-success" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg fixed-bottom nav-bar" data-bs-theme="dark">
     <div class="container-fluid">
       <span class="navbar-brand">Equipe</span>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -19,3 +19,8 @@
     </div>
   </nav>
 </template>
+<style scoped lang="scss">
+  .nav-bar {
+    background-color: #77854A;
+  }
+</style>

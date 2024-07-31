@@ -1,28 +1,32 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import http from '@/http'
+import getDates from '@/util/date'
 
-const umidade = ref()
+const humidityHistory = []
 
 onMounted(async () => {
   try {
     const response = await http.get('&pin=V0')
-    umidade.value = response.data
+    humidityHistory.push(response.data)
   } catch (error) {
     console.error('Error fetching value:', error)
   }
 })
 const options = ref({
   chart: {
-    id: 'vuechart-example'
+    id: 'vuechart-example',
+    background: '#1B3B12',
+    foreColor: '#C4D3BE'
   },
   xaxis: {
-    categories: ['26/06', '27/06', '28/06', '29/06', '30/06', '01/07']
-  }
+    categories: getDates(5)
+  },
+  colors: '#C4D3BE'
 })
 const series = computed(() => [
   {
-    data: [92, 88, 84, 90, 100, umidade.value]
+    data: [40, 20 ,30]
   }
 ])
 </script>
