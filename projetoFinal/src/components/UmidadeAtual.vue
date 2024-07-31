@@ -29,7 +29,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="container">
+  <div class="container justify-content-center">
     <div class="card text-center card-umidade">
       <div class="card-body">
         <h5 class="card-title">Umidade Atual</h5>

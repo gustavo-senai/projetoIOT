@@ -4,23 +4,30 @@ import GraficoInicial from '../GraficoInicial.vue'
 import UmidadeAtual from '../UmidadeAtual.vue'
 </script>
 <template>
-  <div class="container-fluid text-center">
-    <div class="row row-cols-2 p-2">
-      <div class="col-3">
-        <CardAtivar class="my-5" />
+  <div class="container">
+    <div class="left-page">
+        <CardAtivar />
         <UmidadeAtual />
-      </div>
-      <div class="col my-5">
+    </div>
+      <div class="chart">
         <GraficoInicial />
       </div>
     </div>
-  </div>
 </template>
 <style scoped lang="scss">
-* {
+.container {
+  display: flex;
+  flex-direction: row;
   background-color: #C4D3BE;
-  margin: auto;
+  margin: 0;
   padding: 0;
-
+}
+.left-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.chart {
+  display: flex;
 }
 </style>

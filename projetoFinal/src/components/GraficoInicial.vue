@@ -3,7 +3,7 @@ import { computed, onMounted, ref } from 'vue'
 import http from '@/http'
 import getDates from '@/util/date'
 
-const humidityHistory = []
+const humidityHistory: number[] = []
 
 onMounted(async () => {
   try {
@@ -26,14 +26,12 @@ const options = ref({
 })
 const series = computed(() => [
   {
-    data: [40, 20 ,30]
+    data: humidityHistory
   }
 ])
 </script>
 <template>
-  <div class="container-fluid">
-    <div class="card text-center">
+    <div>
       <apexchart type="bar" :options="options" :series="series"></apexchart>
     </div>
-  </div>
 </template>
