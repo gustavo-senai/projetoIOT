@@ -1,3 +1,3 @@
 export default interface Bomba {
-    value: number
+  value: number
 }

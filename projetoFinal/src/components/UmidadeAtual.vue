@@ -29,7 +29,6 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="container justify-content-center">
     <div class="card text-center card-umidade">
       <div class="card-body">
         <h5 class="card-title">Umidade Atual</h5>
@@ -37,13 +36,12 @@ onMounted(async () => {
         <img :src="imagem" alt="" style="height: 12.5rem" />
       </div>
     </div>
-  </div>
 </template>
 <style scoped lang="scss">
 .card-umidade {
-  background-color: #77854A;
+  background-color: #77854a;
 }
 .card-title {
-  color: #000
+  color: #000;
 }
 </style>

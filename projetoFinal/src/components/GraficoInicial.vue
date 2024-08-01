@@ -31,7 +31,7 @@ const series = computed(() => [
 ])
 </script>
 <template>
-    <div>
-      <apexchart type="bar" :options="options" :series="series"></apexchart>
-    </div>
+  <div>
+    <apexchart type="bar" :options="options" :series="series"></apexchart>
+  </div>
 </template>
