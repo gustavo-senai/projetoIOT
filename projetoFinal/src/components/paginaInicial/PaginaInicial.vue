@@ -5,7 +5,7 @@ import UmidadeAtual from '../UmidadeAtual.vue'
 </script>
 
 <template>
-  <div class="container">
+  <div class="contaainer">
     <div class="left-page">
       <CardAtivar />
       <UmidadeAtual />
@@ -17,29 +17,29 @@ import UmidadeAtual from '../UmidadeAtual.vue'
 </template>
 
 <style scoped lang="scss">
-.container {
+.contaainer {
   display: flex;
   flex-direction: row;
   background-color: #c4d3be;
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vh; /* Make sure the container covers the full viewport height */
+  height: 90vh;
 }
 
-.left-page, .chart {
+.left-page,
+.chart {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
-  height: 100%;
+  justify-content: center;
 }
 
 .left-page {
-  flex: 1 1 auto; /* Flex property to distribute space */
+  flex: 1 1 auto;
 }
 
 .chart {
-  flex: 1 1 auto; /* Adjust as needed to give the chart more space */
+  flex: 1 0 auto;
 }
 </style>

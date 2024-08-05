@@ -29,13 +29,13 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div class="card text-center card-umidade">
-      <div class="card-body">
-        <h5 class="card-title">Umidade Atual</h5>
-        <p class="text-warning">{{ umidade }}%</p>
-        <img :src="imagem" alt="" style="height: 12.5rem" />
-      </div>
+  <div class="card text-center card-umidade">
+    <div class="card-body">
+      <h5 class="card-title">Umidade Atual</h5>
+      <p class="text-warning">{{ umidade }}%</p>
+      <img :src="imagem" alt="" style="height: 12.5rem" />
     </div>
+  </div>
 </template>
 <style scoped lang="scss">
 .card-umidade {

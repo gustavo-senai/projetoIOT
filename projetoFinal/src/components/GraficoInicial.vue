@@ -4,13 +4,16 @@ import http from '@/http'
 import getDates from '@/util/date'
 
 const humidityHistory: number[] = []
+const daysNum = 5
 
 onMounted(async () => {
-  try {
-    const response = await http.get('&pin=V0')
-    humidityHistory.push(response.data)
-  } catch (error) {
-    console.error('Error fetching value:', error)
+  for (let i = 1; i <= daysNum; i++) {
+    try {
+      const response = await http.get('&period=WEEK&granularityType=DAILY&output=JSON&pin=V0')
+      humidityHistory.push(response.data)
+    } catch (error) {
+      console.error('Error fetching value:', error)
+    }
   }
 })
 const options = ref({
@@ -20,7 +23,21 @@ const options = ref({
     foreColor: '#C4D3BE'
   },
   xaxis: {
-    categories: getDates(5)
+    categories: getDates(daysNum)
+  },
+  title: {
+    text: 'Historico de umidade',
+    align: 'center',
+    margin: 10,
+    offsetX: 0,
+    offsetY: 0,
+    floating: true,
+    style: {
+      fontSize:  '18px',
+      fontWeight:  'bold',
+      fontFamily:  undefined,
+      color:  '#C4D3BE'
+    },
   },
   colors: '#C4D3BE'
 })
@@ -31,7 +48,14 @@ const series = computed(() => [
 ])
 </script>
 <template>
-  <div>
-    <apexchart type="bar" :options="options" :series="series"></apexchart>
+  <div class="container">
+      <apexchart type="bar" :options="options" :series="series" class="chart" />
   </div>
 </template>
+<style scoped lang="scss">
+.chart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>

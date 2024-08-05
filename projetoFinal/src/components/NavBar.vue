@@ -10,6 +10,6 @@
 </template>
 <style scoped lang="scss">
 .nav-bar {
-  background-color: #0a615b;
+  background-color: #77854a;
 }
 </style>

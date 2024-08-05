@@ -20,6 +20,15 @@
               aria-current="page"
               href="https://allmylinks.com/marcos-souza-juni2"
               target="_blank"
+            >Luan</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="https://allmylinks.com/marcos-souza-juni2"
+              target="_blank"
               >Marcos</a
             >
           </li>
@@ -27,9 +36,18 @@
             <a
               class="nav-link active"
               aria-current="page"
-              href="https://www.example.com/gustavo"
+              href="https://allmylinks.com/vinycius-boaventura"
               target="_blank"
               >Vinycius</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="https://allmylinks.com/w-kauanmachado"
+              target="_blank"
+            >Wagner</a
             >
           </li>
         </ul>
@@ -42,3 +60,5 @@
   background-color: #77854a;
 }
 </style>
+<script setup lang="ts">
+</script>

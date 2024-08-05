@@ -52,15 +52,15 @@ async function buttonClick() {
 </script>
 
 <template>
-    <div class="card text-center card-ativar mb-3" style="width: 18rem">
-      <div class="card-body">
-        <h6 class="card-title text-light">Ativar bomba</h6>
-        <p class="card-title text-light">Estado atual: {{ estadoAtual }}</p>
-        <button type="button" class="btn btn-light" @click="buttonClick()">
-          {{ buttonText }}
-        </button>
-      </div>
+  <div class="card text-center card-ativar mb-3" style="width: 18rem">
+    <div class="card-body">
+      <h6 class="card-title text-light">Ativar bomba</h6>
+      <p class="card-title text-light">Estado atual: {{ estadoAtual }}</p>
+      <button type="button" class="btn btn-light" @click="buttonClick()">
+        {{ buttonText }}
+      </button>
     </div>
+  </div>
 </template>
 <style scoped lang="scss">
 .card-ativar {
