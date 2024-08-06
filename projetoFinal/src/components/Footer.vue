@@ -20,7 +20,7 @@
               aria-current="page"
               href="https://allmylinks.com/marcos-souza-juni2"
               target="_blank"
-            >Luan</a
+              >Luan</a
             >
           </li>
           <li class="nav-item">
@@ -47,7 +47,7 @@
               aria-current="page"
               href="https://allmylinks.com/w-kauanmachado"
               target="_blank"
-            >Wagner</a
+              >Wagner</a
             >
           </li>
         </ul>
@@ -60,5 +60,4 @@
   background-color: #77854a;
 }
 </style>
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>

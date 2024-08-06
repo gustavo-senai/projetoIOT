@@ -9,8 +9,8 @@ const daysNum = 5
 onBeforeMount(async () => {
   for (let i = 1; i <= daysNum; i++) {
     try {
-      const response = await http.get('&period=WEEK&granularityType=DAILY&output=JSON&pin=V0')
-      humidityHistory.push(response.data)
+      const response = await http.get('period=WEEK&granularityType=DAILY&output=JSON&pin=V0')
+      humidityHistory.unshift(response.data)
     } catch (error) {
       console.error('Error fetching value:', error)
     }
@@ -33,11 +33,11 @@ const options = ref({
     offsetY: 0,
     floating: true,
     style: {
-      fontSize:  '18px',
-      fontWeight:  'bold',
-      fontFamily:  undefined,
-      color:  '#C4D3BE'
-    },
+      fontSize: '18px',
+      fontWeight: 'bold',
+      fontFamily: undefined,
+      color: '#C4D3BE'
+    }
   },
   colors: '#C4D3BE'
 })
@@ -49,7 +49,7 @@ const series = computed(() => [
 </script>
 <template>
   <div class="container">
-      <apexchart type="bar" :options="options" :series="series" class="chart" />
+    <apexchart type="bar" :options="options" :series="series" class="chart" />
   </div>
 </template>
 <style scoped lang="scss">

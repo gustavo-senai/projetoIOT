@@ -40,6 +40,9 @@ onMounted(async () => {
 <style scoped lang="scss">
 .card-umidade {
   background-color: #77854a;
+  width: 250px;
+  border-radius: 20px;
+  border: none;
 }
 .card-title {
   color: #000;

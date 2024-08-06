@@ -7,7 +7,7 @@ import UmidadeAtual from '../UmidadeAtual.vue'
 <template>
   <div class="contaainer">
     <div class="left-page">
-      <CardAtivar />
+      <CardAtivar class="ativar" />
       <UmidadeAtual />
     </div>
     <div class="chart">
