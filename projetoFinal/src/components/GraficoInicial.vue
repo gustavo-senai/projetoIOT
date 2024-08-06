@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, onBeforeMount, ref } from 'vue'
 import http from '@/http'
 import getDates from '@/util/date'
 
 const humidityHistory: number[] = []
 const daysNum = 5
 
-onMounted(async () => {
+onBeforeMount(async () => {
   for (let i = 1; i <= daysNum; i++) {
     try {
       const response = await http.get('&period=WEEK&granularityType=DAILY&output=JSON&pin=V0')

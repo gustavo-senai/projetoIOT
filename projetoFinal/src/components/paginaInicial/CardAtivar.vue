@@ -4,7 +4,6 @@ import http from '@/http/index'
 import axios from 'axios'
 
 const bomba = ref<number>()
-const estadoAtual = ref('')
 const buttonText = ref('')
 
 onMounted(async () => {
@@ -12,11 +11,9 @@ onMounted(async () => {
     const response = await http.get('&pin=V1')
     bomba.value = response.data
     if (bomba.value == 1) {
-      estadoAtual.value = 'Ligado'
-      buttonText.value = 'Desligar'
+      buttonText.value = '../../assets/img/regador.png'
     } else {
-      estadoAtual.value = 'Desligado'
-      buttonText.value = 'Ativar'
+      buttonText.value = '../../assets/img/regador.png'
     }
   } catch (error) {
     console.error('Error fetching value:', error)
@@ -30,8 +27,7 @@ async function buttonClick() {
       await axios.get(
         'https://ny3.blynk.cloud/external/api/update?token=2Mqfk3a3xe8JprDv8OaFTjiaB-IpYrxm&V1=0'
       )
-      estadoAtual.value = 'Ligado'
-      buttonText.value = 'Desligar'
+      buttonText.value = '../../assets/img/regador.png'
     } catch (error) {
       console.error('Error updating value:', error)
     }
@@ -42,8 +38,7 @@ async function buttonClick() {
       await axios.get(
         'https://ny3.blynk.cloud/external/api/update?token=2Mqfk3a3xe8JprDv8OaFTjiaB-IpYrxm&V1=1'
       )
-      estadoAtual.value = 'Desligado'
-      buttonText.value = 'Ativar'
+      buttonText.value = '../../assets/img/regador.png'
     } catch (error) {
       console.error('Error updating value:', error)
     }
@@ -55,9 +50,8 @@ async function buttonClick() {
   <div class="card text-center card-ativar mb-3" style="width: 18rem">
     <div class="card-body">
       <h6 class="card-title text-light">Ativar bomba</h6>
-      <p class="card-title text-light">Estado atual: {{ estadoAtual }}</p>
       <button type="button" class="btn btn-light" @click="buttonClick()">
-        {{ buttonText }}
+        <img :src="buttonText" style="height: 50px;">
       </button>
     </div>
   </div>
