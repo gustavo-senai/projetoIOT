@@ -1,20 +1,23 @@
 <script setup lang="ts">
 import { computed, onBeforeMount, ref } from 'vue'
-import http from '@/http'
 import getDates from '@/util/date'
+import axios from "axios";
+import http from "@/http";
 
 const humidityHistory: number[] = []
 const daysNum = 5
+const umidade = ref()
 
 onBeforeMount(async () => {
-  for (let i = 1; i <= daysNum; i++) {
     try {
-      const response = await http.get('period=WEEK&granularityType=DAILY&output=JSON&pin=V0')
-      humidityHistory.unshift(response.data)
+      // const response = await axios.get('https://ny3.blynk.cloud/external/api/data/get?token=2Mqfk3a3xe8JprDv8OaFTjiaB-IpYrxm&period=WEEK&granularityType=DAILY&output=JSON&pin=V0')
+      // humidityHistory.unshift(response.data.value)
+      // console.log(response.data)
+      const response = await http.get('&pin=V0')
+      umidade.value = response.data
     } catch (error) {
       console.error('Error fetching value:', error)
     }
-  }
 })
 const options = ref({
   chart: {
@@ -43,7 +46,7 @@ const options = ref({
 })
 const series = computed(() => [
   {
-    data: humidityHistory
+    data: [umidade.value, 100, 94, 87, 93]
   }
 ])
 </script>
