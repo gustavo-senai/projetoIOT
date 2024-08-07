@@ -7,6 +7,15 @@
         <ul class="navbar-nav">
           <li class="nav-item">
             <a
+                class="nav-link active"
+                aria-current="page"
+                href="https://allmylinks.com/arth-fig"
+                target="_blank"
+            >Arthur</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
               class="nav-link active"
               aria-current="page"
               href="https://allmylinks.com/gustavoeliasdesouza"
@@ -60,4 +69,5 @@
   background-color: #77854a;
 }
 </style>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
