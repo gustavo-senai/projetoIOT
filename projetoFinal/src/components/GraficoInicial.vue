@@ -46,7 +46,7 @@ const options = ref({
 })
 const series = computed(() => [
   {
-    data: [umidade.value, 100, 94, 87, 93]
+    data: [umidade.value, 32, 100, 94, 87]
   }
 ])
 </script>
